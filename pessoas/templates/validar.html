@@ -1,0 +1,11 @@
+<br />
+{{ form.nome.label }} = {{ form.nome.value }}
+<br />
+<input type='text' name="{{ form.nome.label }}" value=" {{ form.nome.value }}" class="" placeholder="Texto qualquer">
+
+{{ form.nome }}
+<br />
+-----------<br />
+{% for pessoa in pessoas %}
+-> {{ pessoa.nome }} {{ pessoa.email }}<br />
+{% endfor %}

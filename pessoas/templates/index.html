@@ -1,0 +1,14 @@
+EXEMPLO PARA LISTAR OS ERROS DO FORMULÁRIO<br />
+
+{% if form.errors %}
+{{ form.errors.as_text }}<br/>
+{% endif %}
+<br />
+
+EXEMPLO PARA PEGAR ERRO INDIVIDUAL: {{ form.campo1.errors }}
+
+<form action="/validar/" method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Enviar" />
+</form>
